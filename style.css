@@ -1,0 +1,408 @@
+body {
+    background-color: #cfb997;
+    margin: 0 auto !important;
+  }
+  
+  .App {
+    text-align: center;
+    background-color: #cfb997;
+    /* min-height: 100vh; */
+  }
+  
+  .Header_tag {
+    color: black;
+    background: white;
+    padding: 10px 15px;
+    font-family: Helvetica;
+  }
+  
+  .App-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size:36px;
+    color: white;
+  }
+  
+  .First_tape:before {
+    content: "";
+    height: 20px;
+    width: 70px;
+    background-color: rgba(255, 255, 255, .3);
+    position: absolute;
+    transform: translateX(520%) translateY(675%) rotate(-45deg);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+  }
+  
+  .Second_tape:before {
+    content: "";
+    height: 20px;
+    width: 70px;
+    background-color: rgba(255, 255, 255, .3);
+    position: absolute;
+    transform: translateX(-625%) translateY(400%) rotate(45deg);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+  }
+  
+  .Third_tape:before {
+    content: "";
+    height: 20px;
+    width: 70px;
+    background-color: rgba(255, 255, 255, .3);
+    position: absolute;
+    transform: translateX(520%) translateY(-50%) rotate(45deg);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+  }
+  
+  .Fourth_tape:before {
+    content: "";
+    height: 20px;
+    width: 70px;
+    background-color: rgba(255, 255, 255, .3);
+    position: absolute;
+    transform: translateX(-625%) translateY(-50%) rotate(-45deg);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+  }
+  
+
+  
+  .balloon {
+    display:inline-block;
+    width:60px;
+    height:75px;
+    background:lightgray;
+    border-radius:80%;
+    position:relative;
+    box-shadow:inset -10px -10px 0 rgba(0,0,0,0.07);
+    margin: 0 50px;
+    margin-top: 250px;
+    transition:transform 0.5s ease;
+    z-index:10;
+    animation:balloons 4s ease-in-out infinite;
+    transform-origin:bottom center;
+  }
+  
+  @keyframes balloons {
+    0%,100%{ transform:translateY(0) rotate(-4deg); }
+    50%{ transform:translateY(-25px) rotate(4deg); }
+  }
+  
+  
+  .balloon:before {
+    content:"▲";
+    font-size:20px;
+    color:lightgray;
+    display:block;
+    text-align:center;
+    transform: rotate(180deg);
+    width:100%;
+    position:absolute;
+    top:-12px;
+    z-index:-100;
+  }
+  
+  .balloon:after {
+    display:inline-block;
+    z-index: -101;
+    bottom:100%;
+    position:absolute;
+    height:250px;
+    width:10px;
+    margin:0 auto;
+    content:"";
+    background: #d6d6d6;
+  }
+  
+  .balloon:nth-child(2){ background: #603215; animation-duration:3.5s; }
+  .balloon:nth-child(2):before { color: #603215;  }
+  
+  .balloon:nth-child(3){ background:gray; animation-duration:3s; }
+  .balloon:nth-child(3):before { color:gray;  }
+  
+  .balloon:nth-child(4){ background: #4d4d4d; animation-duration:4.5s; }
+  .balloon:nth-child(4):before { color: #4d4d4d;  }
+  
+  .balloon:nth-child(5){ background:saddlebrown; animation-duration:5s; }
+  .balloon:nth-child(5):before { color:saddlebrown;  }
+  
+  
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @media only screen and (max-width: 1920px) {
+
+  .App-header {
+      font-size: 30PX;
+  }
+        
+  .First_tape:before {
+    width: 50px;
+    transform: translateX(600%) translateY(550%) rotate(-45deg);
+  }
+  .Second_tape:before {
+    width: 50px;
+    transform: translateX(-700%) translateY(350%) rotate(45deg);
+  }
+  
+  .Third_tape:before {
+    width: 50px;
+    transform: translateX(590%) translateY(-50%) rotate(45deg);
+  }
+  
+  .Fourth_tape:before {
+    width: 50px;
+    transform: translateX(-700%) translateY(-50%) rotate(-45deg);
+  }
+  }
+
+
+  @media only screen and (max-width: 1000px) {
+  
+    .App-header {
+        font-size: 28px;
+    }
+}
+
+  
+  @media only screen and (max-width: 870px) {
+
+    .App-header {
+        font-size: 26px;
+    }
+
+    .First_tape:before {
+      transform: translateX(535%) translateY(550%) rotate(-45deg);
+    }
+    .Second_tape:before {
+      transform: translateX(-650%) translateY(350%) rotate(45deg);
+    }
+    .Third_tape:before {
+      transform: translateX(535%) translateY(-50%) rotate(45deg);
+    }
+    .Fourth_tape:before {
+      transform: translateX(-650%) translateY(-50%) rotate(-45deg);
+    }
+  
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .balloon {
+      margin: 0 40px;
+      margin-top: 250px;
+    }
+  }
+  
+  @media only screen and (max-width: 760px) {
+
+    .App-header {
+        font-size: 24px;
+    }
+    .First_tape:before {
+      transform: translateX(500%) translateY(500%) rotate(-45deg);
+    }
+    .Second_tape:before {
+      transform: translateX(-600%) translateY(300%) rotate(45deg);
+    }
+    .Third_tape:before {
+      transform: translateX(500%) translateY(-30%) rotate(45deg);
+    }
+    .Fourth_tape:before {
+      transform: translateX(-600%) translateY(-30%) rotate(-45deg);
+    }
+  }
+  
+  @media only screen and (max-width: 700px) {
+      .balloon {
+        margin: 0 35px;
+        margin-top: 250px;
+      }
+  }
+  
+  @media only screen and (max-width: 685px) {
+
+    .App-header {
+        font-size: 22px;
+    }
+    .First_tape:before {
+      transform: translateX(450%) translateY(480%) rotate(-45deg);
+    }
+    .Second_tape:before {
+      transform: translateX(-550%) translateY(300%) rotate(45deg);
+    }
+    .Third_tape:before {
+      transform: translateX(450%) translateY(-30%) rotate(45deg);
+    }
+    .Fourth_tape:before {
+      transform: translateX(-550%) translateY(-30%) rotate(-45deg);
+    }
+  
+  }
+  
+  @media only screen and (max-width: 650px) {
+    .balloon {
+      margin: 0 30px;
+      margin-top: 250px;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .balloon {
+      width:50px;
+      height:60px;
+      margin: 0 28px;
+      margin-top: 150px;
+    }
+  
+    .balloon:after {
+      height:150px;
+      width:8px;
+    }
+  }
+  
+  @media only screen and (max-width: 590px) {
+    .App-header {
+        font-size: 22px;
+    }
+    .First_tape:before {
+      transform: translateX(425%) translateY(450%) rotate(-45deg);
+    }
+    .Second_tape:before {
+      transform: translateX(-550%) translateY(300%) rotate(45deg);
+    }
+    .Third_tape:before {
+      transform: translateX(450%) translateY(-30%) rotate(45deg);
+    }
+    .Fourth_tape:before {
+      transform: translateX(-550%) translateY(-30%) rotate(-45deg);
+    }
+    .balloon {
+      margin: 0 25px;
+      margin-top: 150px;
+    }
+  }
+  
+  @media only screen and (max-width: 550px) {
+    .balloon {
+      margin: 0 20px;
+      margin-top: 150px;
+    }
+  }
+  
+  @media only screen and (max-width: 525px) {
+    .balloon {
+      margin: 0 15px;
+      margin-top: 150px;
+    }
+  }
+  
+  @media only screen and (max-width: 450px) {
+    .App-header {
+      font-size: 14px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .Header_tag {
+      position: relative;
+      text-align: center;
+    }
+  
+    .First_tape:before {
+      width: 50px;
+      height: 15px;
+      transform: translateX(260%) translateY(400%) rotate(-45deg);
+    }
+    .Second_tape:before {
+      width: 50px;
+      height: 15px;
+      transform: translateX(-370%) translateY(300%) rotate(45deg);
+    }
+    .Third_tape:before {
+      width: 50px;
+      height: 15px;
+      transform: translateX(275%) translateY(-30%) rotate(45deg);
+    }
+    .Fourth_tape:before {
+      width: 50px;
+      height: 15px;
+      transform: translateX(-375%) translateY(-30%) rotate(-45deg);
+    }
+  
+    .balloon {
+      width:25px;
+      height:30px;
+      margin: 0 21px;
+      margin-top: 150px;
+    }
+  
+    .balloon:before {
+      font-size:15px;
+    }
+  
+    .balloon:after {
+      height:150px;
+      width:5px;
+    }
+  }
+
+  @media only screen and (max-width: 330px) {
+    .App-header {
+      font-size: 12px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .Header_tag {
+      position: relative;
+      text-align: center;
+    }
+  
+    .First_tape:before {
+      width: 50px;
+      height: 15px;
+      transform: translateX(240%) translateY(400%) rotate(-45deg);
+    }
+    .Second_tape:before {
+      width: 50px;
+      height: 15px;
+      transform: translateX(-330%) translateY(300%) rotate(45deg);
+    }
+    .Third_tape:before {
+      width: 50px;
+      height: 15px;
+      transform: translateX(240%) translateY(-30%) rotate(45deg);
+    }
+    .Fourth_tape:before {
+      width: 50px;
+      height: 15px;
+      transform: translateX(-330%) translateY(-30%) rotate(-45deg);
+    }
+  
+    .balloon {
+      width:25px;
+      height:30px;
+      margin: 0 15px;
+      margin-top: 150px;
+    }
+  
+    .balloon:before {
+      font-size:15px;
+    }
+  
+    .balloon:after {
+      height:150px;
+      width:5px;
+    }
+  }
+  
