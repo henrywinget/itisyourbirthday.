@@ -70,21 +70,21 @@ body {
     display:inline-block;
     width:60px;
     height:75px;
-    background:lightgray;
+    background:rgb(143, 143, 143);
     border-radius:80%;
     position:relative;
     box-shadow:inset -10px -10px 0 rgba(0,0,0,0.07);
     margin: 0 50px;
     margin-top: 250px;
-    transition:transform 0.5s ease;
+    transition:transform 1.5s ease;
     z-index:10;
-    animation:balloons 4s ease-in-out infinite;
+    animation:balloons 8s ease-in-out infinite;
     transform-origin:bottom center;
   }
   
   @keyframes balloons {
-    0%,100%{ transform:translateY(0) rotate(-4deg); }
-    50%{ transform:translateY(-25px) rotate(4deg); }
+    0%,100%{ transform:translateY(0) rotate(-2deg); }
+    50%{ transform:translateY(-15px) rotate(2deg); }
   }
   
   
@@ -122,8 +122,8 @@ body {
   .balloon:nth-child(4){ background: #4d4d4d; animation-duration:4.5s; }
   .balloon:nth-child(4):before { color: #4d4d4d;  }
   
-  .balloon:nth-child(5){ background:saddlebrown; animation-duration:5s; }
-  .balloon:nth-child(5):before { color:saddlebrown;  }
+  .balloon:nth-child(5){ background:#603215; animation-duration:5s; }
+  .balloon:nth-child(5):before { color:#603215;  }
   
   
   
