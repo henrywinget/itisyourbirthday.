@@ -108,9 +108,9 @@ body {
     position:absolute;
     height:250px;
     width:10px;
-    margin:0 auto;
+    margin:0 -5px;
     content:"";
-    background: #d6d6d6;
+    background: linear-gradient(to right, #f0f0f0, #d6d6d6);
   }
   
   .balloon:nth-child(2){ background: #603215; animation-duration:3.5s; }
